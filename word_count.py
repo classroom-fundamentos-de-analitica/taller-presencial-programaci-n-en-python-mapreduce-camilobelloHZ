@@ -135,13 +135,13 @@ def job(input_directory, output_directory):
     sequence = mapper(sequence)
     sequence = shuffle_and_sort(sequence)
     sequence= reducer(sequence)
-    create_ouptput_directory("Output/")
-    save_output("Output", sequence)
-    create_marker("Output")
+    create_ouptput_directory("output/")
+    save_output("output", sequence)
+    create_marker("output")
 
 
 if __name__ == "__main__":
      job(
          "input",
-         "Output",
+         "output",
      )
